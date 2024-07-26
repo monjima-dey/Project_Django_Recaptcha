@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Contact</title>
+    <style>
+      body {
+        font-family: Times New Roman; /* Change font family */
+        background-color: #000000; /* Black background */
+        color: #000000; /* Black text color */
+        padding: 15px;
+        overflow: scroll; /* Prevent background overflow */
+        font-size: 20px;
+        letter-spacing: 0.1em;
+        font-weight: bold;
+      }
+      h2 {
+        color: #00ffd8; /* Green heading color */
+        font-size: 60px;
+        background-color: rgba(0.8, 0.6, 0.8, 0.7);
+        padding: 10px;
+        margin-top: 15px;
+        font-weight: bold;
+        text-align: center; /* Center align the text */
+        word-spacing: 0.5em; /* Double space between words */
+        letter-spacing: 0.25em; /* Double space between letters */
+        text-shadow: 1px 1px 0 #000, -1px -2px 0 #000, 1px -2px 0 #000,
+          -3px -2px -2px #fff; /* Shadow effect to mimic border */
+      }
+      form {
+        margin-top: -20px;
+        background-color: rgba(
+          139,
+          247,
+          244,
+          0.7
+        ); /* Semi-transparent 
+black for the form */
+        padding: 25px;
+        border-radius: 20px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        font-family: Times New Roman;
+        font-size: 20px;
+        padding: 0.5px;
+        margin-bottom: 15px;
+        border: 2px solid #fff; /* White border for input fields */
+        border-radius: 4px;
+        box-sizing: border-box;
+        background-color: rgba(
+          0.8,
+          0.6,
+          0.8,
+          0.8
+        ); /* Semi-transparent 
+black background */
+        color: #fff; /* White text color */
+        position: relative;
+        margin: 5px 0;
+        border-bottom: 2px solid #fff;
+        width: 1300px; /* Adjust the width as needed */
+        height: 50px; /* Adjust the height as needed */
+      }
+      button[type="submit"] {
+        background-color: #1cdaab; /* Bright GREEN submit button */
+        color: 0000;
+        padding: 10px 30px;
+        border: 10px;
+        border-radius: 15px;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: bold; /* Making the word "submit" bold */
+      }
+      button[type="submit"]:hover {
+        background-color: #f7ff58; /* yellow on hover */
+      }
+      .g-recaptcha {
+        margin-top: -40px; /* Move the reCAPTCHA box up */
+        margin-left: 120px;
+        display: inline-grid; /* Ensure it's displayed inline */
+        left: 170px;
+        up: 140px;
+        border-radius: 15px; /* Rounded corners */
+        border-radius: 7px; /* Rounded corners */
+        border: 4px solid black; /* Green border color */
+      }
+      /* Shaded balls background */
+      .background-balls {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 150%;
+        height: 150%;
+        z-index: -1;
+        pointer-events: none;
+      }
+      .background-balls span {
+        position: absolute;
+        width: 145px;
+        height: 145px;
+        background: #35d4c4; /* Sky blue color */
+        border-radius: 50%;
+        opacity: 0.4; /* Brighter blue balls */
+        animation: balls 25s linear infinite;
+      }
+      .background-balls span:nth-child(odd) {
+        background: #c43960; /* Bright pink color */
+      }
+      .background-balls span:nth-child(1) {
+        left: 10%;
+        top: 20%;
+      }
+      .background-balls span:nth-child(2) {
+        left: 20%;
+        top: 50%;
+      }
+      .background-balls span:nth-child(3) {
+        left: 30%;
+        top: 70%;
+      }
+      .background-balls span:nth-child(4) {
+        left: 40%;
+        top: 30%;
+      }
+      .background-balls span:nth-child(5) {
+        left: 50%;
+        top: 60%;
+      }
+      .background-balls span:nth-child(6) {
+        left: 60%;
+        top: 40%;
+      }
+      .background-balls span:nth-child(7) {
+        left: 70%;
+        top: 80%;
+      }
+      .background-balls span:nth-child(8) {
+        left: 80%;
+        top: 10%;
+      }
+      .background-balls span:nth-child(9) {
+        left: 90%;
+        top: 50%;
+      }
+      .background-balls span:nth-child(10) {
+        left: 5%;
+        top: 80%;
+      }
+      .background-balls span:nth-child(11) {
+        left: 15%;
+        top: 40%;
+      }
+      .background-balls span:nth-child(12) {
+        left: 25%;
+        top: 20%;
+      }
+      .background-balls span:nth-child(13) {
+        left: 35%;
+        top: 60%;
+      }
+      .background-balls span:nth-child(14) {
+        left: 45%;
+        top: 90%;
+      }
+      .background-balls span:nth-child(15) {
+        left: 55%;
+        top: 30%;
+      }
+      .background-balls span:nth-child(16) {
+        left: 65%;
+        top: 70%;
+      }
+      .background-balls span:nth-child(17) {
+        left: 75%;
+        top: 10%;
+      }
+      .background-balls span:nth-child(18) {
+        left: 85%;
+        top: 50%;
+      }
+      .background-balls span:nth-child(19) {
+        left: 95%;
+        top: 80%;
+      }
+      @keyframes balls {
+        0% {
+          transform: translateY(0) scale(1);
+          opacity: 0.4; /* Brighter blue balls */
+        }
+        50% {
+          transform: translateY(-300px) scale(1.2);
+          opacity: 0.7; /* Brighter blue balls */
+        }
+        100% {
+          transform: translateY(-600px) scale(1);
+          opacity: 0.4; /* Brighter blue balls */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>CONTACT FORM</h2>
+    <form method="post">
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit">Submit</button>
+    </form>
+    <!-- Shaded balls background -->
+    <div class="background-balls">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </body>
+</html>
